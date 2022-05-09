@@ -1,13 +1,151 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  scroll-behavior: smooth;
+  font-family: 'Indie Flower', cursive, sans-serif;
+}
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+  background-color: #28a183;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  nav {
+    padding: 0 3rem;
+  }
+}
+
+nav a {
+  text-shadow: -1px -1px 0 rgb(138, 138, 138), 1px -1px 0 rgb(138, 138, 138),
+    -1px 1px 0 rgb(138, 138, 138), 1px 1px 0 rgb(138, 138, 138);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(122, 26, 212);
+  display: inline-block;
+}
+nav a:hover {
+  text-shadow: -1px -1px 0 rgb(122, 26, 212), 1px -1px 0 rgb(122, 26, 212),
+    -1px 1px 0 rgb(122, 26, 212), 1px 1px 0 rgb(122, 26, 212);
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.1);
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  min-width: 15rem;
+  height: 3rem;
+}
+
+input:first-child {
+  margin: 0 1rem 0.5rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: min(90%, 70.5rem);
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo a {
+  color: white;
+  font-size: 2rem;
+  margin-left: -20%;
+}
+
+.row {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 550px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  min-width: 7rem;
+  border: dashed 3px white;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+.nav-link:first-child {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .column {
+    flex-direction: row;
+  }
+  .nav-link {
+    padding: 0.5rem;
+  }
+  .nav-link:first-child {
+    margin: 0 1.5rem 0 0;
+  }
+}
+
+.google-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 0.5rem;
+}
+
+.google-button img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#group-1 {
+  animation: spin 1.5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
