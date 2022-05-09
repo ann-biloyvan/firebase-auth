@@ -23,7 +23,6 @@ export default function HomePage() {
     }
   }, [timer, isAuth]);
 
-  console.log(isAuth);
 
   return (
     <>
