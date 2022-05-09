@@ -109,6 +109,12 @@ input:first-child {
   margin-bottom: 0.5rem;
 }
 
+.countdown {
+  display: inline-block;
+  width: 0.5rem;
+  color: #28a183;
+}
+
 @media screen and (min-width: 500px) {
   .column {
     flex-direction: row;

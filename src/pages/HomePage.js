@@ -23,8 +23,6 @@ export default function HomePage() {
     }
   }, [timer, isAuth]);
 
-  console.log(isAuth);
-
   return (
     <>
       {!isAuth ? (
@@ -32,7 +30,7 @@ export default function HomePage() {
           <h1>Hey! You need to be logged in to enjoy this website.</h1>
           <h3>
             You're gonna be redirected to <Link to={'/login'}>login page</Link>{' '}
-            in {timer} seconds
+            in <span className="countdown">{timer}</span> seconds
           </h3>
         </>
       ) : (
